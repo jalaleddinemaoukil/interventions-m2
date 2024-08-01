@@ -1,0 +1,85 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2"><%= intervention.interventionTitre %> - <%= intervention.nomSociete %></h1>
+  <div class="btn-toolbar mb-2 mb-md-0">
+    <div class="btn-group me-2">
+      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="/export/<%= intervention._id %>" class="btn btn-sm ">Export as PDF</a></button>
+    </div>
+  </div>
+</div>
+
+<div class="col py-3">
+  <div class="row">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+          <li class="breadcrumb-item active"><%= intervention.interventionTitre %></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="col text-end fw-lighter">
+      <b>Last Updated: <%= new Date(intervention.updatedAt).toLocaleString() %></b>
+      <b>Intervention ID:</b> <%= intervention._id %>
+    </div>
+  </div>
+</div>
+
+
+
+<ul class="list-group">
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Nom-Societe:</b></div>
+      <div class="col"><%= intervention.nomSociete %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Telephone-Societe:</b></div>
+      <div class="col"><%= intervention.telSociete %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Email-Societe:</b></div>
+      <div class="col"><%= intervention.email %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Address-Societe:</b></div>
+      <div class="col"><%= intervention.address %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Ville-Societe:</b></div>
+      <div class="col"><%= intervention.ville %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Details-Intervention:</b></div>
+      <div class="col"><%= intervention.details %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Date Created:</b></div>
+      <div class="col"><%= new Date(intervention.createdAt).toLocaleString() %></div>
+    </div>
+  </li>
+
+  <li class="list-group-item">
+    <div class="row">
+      <div class="col" style="max-width: 140px"><b>Date Modified:</b></div>
+      <div class="col"><%= new Date(intervention.updatedAt).toLocaleString() %></div>
+    </div>
+  </li>
+</ul>
